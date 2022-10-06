@@ -17,9 +17,9 @@
 // Plugin Information
 $l['high_code_sacc_name'] = 'Resaltar codigo Seleccionar todo copiar codigo';
 $l['high_code_sacc_description'] = 'Seleccione todo y copie en Codigo y bloques de codigo PHP y resaltado de sintaxis para MyBB.';
-$l['high_code_sacc_website'] = 'https://github.com/ic_myXMB/MyBB_Plugin-high_code_sacc';
+$l['high_code_sacc_website'] = 'https://github.com/ic-myXMB/MyBB_Plugin-high_code_sacc';
 $l['high_code_sacc_author'] = 'ic_myXMB & Vintagedaddyo';
-$l['high_code_sacc_author_site'] = 'https://github.com/ic_myXMB/MyBB_Plugin-high_code_sacc';
+$l['high_code_sacc_author_site'] = 'https://github.com/ic-myXMB/MyBB_Plugin-high_code_sacc';
 $l['high_code_sacc_version'] = '1.0.1';
 $l['high_code_sacc_guid'] = '';
 $l['high_code_sacc_compatability'] = '18*';
