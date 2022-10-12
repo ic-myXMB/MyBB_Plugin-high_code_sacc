@@ -7,27 +7,25 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0
+ * Plugin Version: 1.0.1
  * 
  */
 
-    // Init Highlight
-    document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('code').forEach((el) => {
+// Init Highlight
+document.addEventListener('DOMContentLoaded', (event) => {
+     document.querySelectorAll('code').forEach((el) => {
        hljs.highlightElement(el);
-      });
     });
-
-  // brPlugin
-  const brPlugin = {
+});
+// brPlugin
+const brPlugin = {
     "before:highlightBlock": ({ block }) => {
       block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
     },
     "after:highlightBlock": ({ result }) => {
       result.value = result.value.replace(/\n/g, '<br>');
     }
-  };
-
+};
 // Init brPlugin
 hljs.addPlugin(brPlugin);	
 
@@ -39,7 +37,7 @@ hljs.addPlugin(brPlugin);
     } else {
         w.console.error('highlight.js not detected!');
     }
-
+    // initLineNumbersOnLoad
     function initLineNumbersOnLoad() {
         if (d.readyState === 'interactive' || d.readyState === 'complete') {
             documentReady();
@@ -49,7 +47,7 @@ hljs.addPlugin(brPlugin);
             });
         }
     }
-
+    // addLineNumbersForCode
     function addLineNumbersForCode(html) {
         var num = 1;
         html = '<span class="ln-num" data-num="' + num + '"></span>' + html;
@@ -60,7 +58,7 @@ hljs.addPlugin(brPlugin);
         html = '<span class="ln-bg"></span>' + html;
         return html;
     }
-
+    // documentReady
     function documentReady() {
         var elements = d.querySelectorAll('.hljs');
         for (var i = 0; i < elements.length; i++) {

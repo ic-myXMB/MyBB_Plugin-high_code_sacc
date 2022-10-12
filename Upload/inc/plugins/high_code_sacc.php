@@ -141,113 +141,7 @@ function high_code_sacc_deactivate() {
 // High_Code_Sacc Func
 function high_code_sacc() {
 
-  // Globals
-  global $headerinclude;
-
-  // Headerinclude
-  $headerinclude .= "
-<!-- Select All / Copy -->
-<script type=\"text/javascript\">
-function selectCode(a)
-{
-   var e = a.parentNode.parentNode.getElementsByTagName('CODE')[0];
-   if (window.getSelection)
-   {
-      var s = window.getSelection();
-       if (s.setBaseAndExtent)
-      {
-         s.setBaseAndExtent(e, 0, e.parentNode, 1);
-      }
-      else
-      {
-         var r = document.createRange();
-         r.selectNodeContents(e);
-         s.removeAllRanges();
-         s.addRange(r);      
-      }
-   }
-   else if (document.getSelection)
-   {
-      var s = document.getSelection();
-      var r = document.createRange();
-      r.selectNodeContents(e);
-      s.removeAllRanges();
-      s.addRange(r);
-   }
-   else if (document.selection)
-   {
-      var r = document.body.createTextRange();
-      r.moveToElementText(e);
-      r.select();     
-   }
-   document.execCommand('copy');
-}
-</script>
-<!-- Highlight JS --> 
-<script src=\"inc/plugins/highlight/highlight.min.js\"></script>
-<!-- Highlight JS And Plugins Init -->  
-<script src=\"inc/plugins/highlight/high_code_sacc_init.js\"></script>
-<!-- Highlight JS Custom LineNumbers Plugin Style --> 
-<style>
-.hljs-ln {
-    position: relative;
-    padding-left: 3em !important;
-}
-.hljs-ln .ln-bg {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 2.2em;
-    height: 100%;
-    border-right: 1px solid #ccc;
-    /*background: rgba(255, 255, 255, 0.18);*/
-    margin-left: 0.5em;
-}
-.hljs-ln .ln-num {
-    position: relative;
-    display: inline-block;
-    height: 1em;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.hljs-ln .ln-num::before {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    margin-right: 1em;
-    color: #777;
-    font-style: normal;
-    font-weight: normal;
-    content: attr(data-num);
-}
-pre, code {
-    padding: 0;
-    margin: 0;
-    white-space: pre;
-} 
-</style>";
-  
-  // Globals
-  global $lang;
-
-  // Language Load
-  $lang->load("high_code_sacc");
-
-  // Do The (Select All) Links Via Lang Files
-
-  // Php Code (Select All) Is Lang PHP Code
-  $lang->php_code .= ''.$lang->high_code_sacc_php_code.'';
-
-  // Code Code (Select All) Is Lang Code
-  $lang->code .= ''.$lang->high_code_sacc_code.'';
-
-  // Styles
+  // All Styles
   
   // Globals
   global $mybb, $high_code_sacc;
@@ -611,6 +505,113 @@ pre, code {
 
   // If Plugin Active
   if ($mybb->settings['high_code_sacc_setting_1'] == "1") { 
+
+     // Globals
+     global $headerinclude;
+
+     // Headerinclude
+     $headerinclude .= "
+<!-- Select All / Copy -->
+<script type=\"text/javascript\">
+function selectCode(a)
+{
+   var e = a.parentNode.parentNode.getElementsByTagName('CODE')[0];
+   if (window.getSelection)
+   {
+      var s = window.getSelection();
+       if (s.setBaseAndExtent)
+      {
+         s.setBaseAndExtent(e, 0, e.parentNode, 1);
+      }
+      else
+      {
+         var r = document.createRange();
+         r.selectNodeContents(e);
+         s.removeAllRanges();
+         s.addRange(r);      
+      }
+   }
+   else if (document.getSelection)
+   {
+      var s = document.getSelection();
+      var r = document.createRange();
+      r.selectNodeContents(e);
+      s.removeAllRanges();
+      s.addRange(r);
+   }
+   else if (document.selection)
+   {
+      var r = document.body.createTextRange();
+      r.moveToElementText(e);
+      r.select();     
+   }
+   document.execCommand('copy');
+}
+</script>
+<!-- Highlight JS --> 
+<script src=\"inc/plugins/highlight/highlight.min.js\"></script>
+<!-- Highlight JS And Plugins Init -->  
+<script src=\"inc/plugins/highlight/high_code_sacc_init.js\"></script>
+<!-- Highlight JS Custom LineNumbers Plugin Style --> 
+<style>
+.hljs-ln {
+    position: relative;
+    padding-left: 3em !important;
+}
+.hljs-ln .ln-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 2.2em;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    /*background: rgba(255, 255, 255, 0.18);*/
+    margin-left: 0.5em;
+}
+.hljs-ln .ln-num {
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.hljs-ln .ln-num::before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    color: #777;
+    font-style: normal;
+    font-weight: normal;
+    content: attr(data-num);
+}
+pre, code {
+    padding: 0;
+    margin: 0;
+    white-space: pre;
+} 
+</style>";
+  
+     // Globals
+     global $lang;
+
+     // Language Load
+     $lang->load("high_code_sacc");
+
+     // Do The (Select All) Links Via Lang Files
+
+     // Php Code (Select All) Is Lang PHP Code
+     $lang->php_code .= ''.$lang->high_code_sacc_php_code.'';
+
+     // Code Code (Select All) Is Lang Code
+     $lang->code .= ''.$lang->high_code_sacc_code.'';
+
   	 // Add Codeblock Style Inline
      $high_code_sacc = "<style>".$codeblock_style."</style>";
   }
