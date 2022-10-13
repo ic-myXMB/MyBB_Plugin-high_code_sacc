@@ -11,7 +11,7 @@
  * 
  */
 
-// Init Highlight
+// Init HighlightJS
 // add event
 document.addEventListener('DOMContentLoaded', (event) => {
      // wrap code tags in pre tags

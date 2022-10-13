@@ -18,11 +18,10 @@ if(!defined("IN_MYBB")) {
   die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
 }
 
-// Add Hooks
+// Add Plugin Hooks
 
 // Load in Showthread
 $plugins->add_hook("showthread_start", "high_code_sacc");
-
 // Load in Portal 
 $plugins->add_hook("portal_start", "high_code_sacc");
 
@@ -46,12 +45,13 @@ function high_code_sacc_info() {
         'codename' => $lang->high_code_sacc_code_name,
         'compatibility' => $lang->high_code_sacc_compatability
     );
+    
 }
 
 // Plugin Activate
 function high_code_sacc_activate() {
 
-  // Add Settings
+  // Add Plugin Settings
 
   // Globals
   global $db, $mybb, $lang; 
@@ -68,8 +68,10 @@ function high_code_sacc_activate() {
         'isdefault'     => '0'
     );
 
+    // gid
     $gid = $db->insert_query('settinggroups', $settinggroups);
-
+    
+    // disporder
     $disporder = '0';
     
     // Setting 1
@@ -84,6 +86,7 @@ function high_code_sacc_activate() {
         'gid'           => $gid
     );
 
+    // Query Insert
     $db->insert_query('settings', $setting);
 
     // Setting 2
@@ -98,6 +101,7 @@ function high_code_sacc_activate() {
         'gid'           => $gid
     );
 
+    // Query Insert
     $db->insert_query('settings', $setting);
     
     // Rebuild Settings
@@ -106,11 +110,11 @@ function high_code_sacc_activate() {
     // Edit Templates
     require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
-    // Add
+    // Add Template Edits
 
-    // Showthread
+    // Showthread Template
     find_replace_templatesets('showthread', '#'.preg_quote('</head>').'#i', '{$high_code_sacc}</head>');
-    // Portal
+    // Portal Template
     find_replace_templatesets('portal', '#'.preg_quote('</head>').'#i', '{$high_code_sacc}</head>');
 
 }
@@ -130,18 +134,19 @@ function high_code_sacc_deactivate() {
   // Edit Templates
   require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
-  // Remove
+  // Remove Template Edits
 
-  // Showthread
+  // Showthread Template
   find_replace_templatesets('showthread', '#'.preg_quote('{$high_code_sacc}</head>').'#i', '</head>');
-  // Portal
+  // Portal Template
   find_replace_templatesets('portal', '#'.preg_quote('{$high_code_sacc}</head>').'#i', '</head>');
+
 }
 
 // High_Code_Sacc Func
 function high_code_sacc() {
 
-  // All Styles
+  // All Currently Inclued Styles Inline
   
   // Globals
   global $mybb, $high_code_sacc;
@@ -149,6 +154,7 @@ function high_code_sacc() {
   // Style 0: Default
   if ($mybb->settings['high_code_sacc_setting_2'] == "0") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Default
   Description: Original highlight.js style
@@ -171,6 +177,7 @@ function high_code_sacc() {
   // Style 1: Solarized Dark
   if ($mybb->settings['high_code_sacc_setting_2'] == "1") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Solarized Dark
   Author: Ethan Schoonover (modified by aramisgithub)
@@ -191,6 +198,7 @@ function high_code_sacc() {
   // Style 2: Solarized Light
   if ($mybb->settings['high_code_sacc_setting_2'] == "2") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Solarized Light
   Author: Ethan Schoonover (modified by aramisgithub)
@@ -211,6 +219,7 @@ function high_code_sacc() {
   // Style 3: Github
   if ($mybb->settings['high_code_sacc_setting_2'] == "3") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Github
   Author: Defman21
@@ -231,6 +240,7 @@ function high_code_sacc() {
   // Style 4: Railscasts
   if ($mybb->settings['high_code_sacc_setting_2'] == "4") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Railscasts
   Author: Ryan Bates (http://railscasts.com)
@@ -251,6 +261,7 @@ function high_code_sacc() {
   // Style 5: Monakai Sublime
   if ($mybb->settings['high_code_sacc_setting_2'] == "5") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Monakai Sublime
   Author: 
@@ -271,6 +282,7 @@ function high_code_sacc() {
   // Style 6: Mono Blue
   if ($mybb->settings['high_code_sacc_setting_2'] == "6") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Mono Blue
   Author: 
@@ -291,6 +303,7 @@ function high_code_sacc() {
   // Style 7: Tomorrow
   if ($mybb->settings['high_code_sacc_setting_2'] == "7") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Tomorrow
   Author: Chris Kempson (http://chriskempson.com)
@@ -311,6 +324,7 @@ function high_code_sacc() {
   // Style 8: Color Brewer
   if ($mybb->settings['high_code_sacc_setting_2'] == "8") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Color Brewer
   Author:
@@ -331,6 +345,7 @@ function high_code_sacc() {
   // Style 9: Zenburn
   if ($mybb->settings['high_code_sacc_setting_2'] == "9") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Zenburn
   Author: elnawe
@@ -351,6 +366,7 @@ function high_code_sacc() {
   // Style 10: Agate
   if ($mybb->settings['high_code_sacc_setting_2'] == "10") {
 
+     // Style
      $codeblock_style = "pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
    Theme: Agate
    Author: (c) Taufik Nurrohman <hi@taufik-nurrohman.com>
@@ -384,6 +400,7 @@ function high_code_sacc() {
   // Style 11: Android Studio
   if ($mybb->settings['high_code_sacc_setting_2'] == "11") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Android Studio
   Author:
@@ -404,6 +421,7 @@ function high_code_sacc() {
   // Style 12: Dracula
   if ($mybb->settings['high_code_sacc_setting_2'] == "12") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Dracula
   Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
@@ -424,6 +442,7 @@ function high_code_sacc() {
   // Style 13: Rainbow
   if ($mybb->settings['high_code_sacc_setting_2'] == "13") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Rainbow
   Author: 
@@ -444,6 +463,7 @@ function high_code_sacc() {
   // Style 14: VS
   if ($mybb->settings['high_code_sacc_setting_2'] == "14") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: VS
   Author: 
@@ -464,6 +484,7 @@ function high_code_sacc() {
   // Style 15: Atom One Dark
   if ($mybb->settings['high_code_sacc_setting_2'] == "15") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Atom One Dark
   Author: 
@@ -484,6 +505,7 @@ function high_code_sacc() {
   // Style 16: Atom One Light
   if ($mybb->settings['high_code_sacc_setting_2'] == "16") {
 
+     // Style
      $codeblock_style = "/*!
   Theme: Atom One Light
   Author: 
@@ -549,11 +571,12 @@ function selectCode(a)
 }
 </script>
 <!-- Highlight JS --> 
-<script src=\"inc/plugins/highlight/highlight.min.js\"></script>
+<script src=\"inc/plugins/highlight/jscripts/highlight.min.js\"></script>
 <!-- Highlight JS And Plugins Init -->  
-<script src=\"inc/plugins/highlight/high_code_sacc_init.js\"></script>
+<script src=\"inc/plugins/highlight/jscripts/high_code_sacc_init.js\"></script>
 <!-- Highlight JS Custom LineNumbers Plugin Style --> 
 <style>
+/** Linenumbers Plug **/
 .hljs-ln {
     position: relative;
     padding-left: 3em !important;
@@ -591,6 +614,7 @@ function selectCode(a)
     font-weight: normal;
     content: attr(data-num);
 }
+/* pre, code */
 pre, code {
     padding: 0;
     margin: 0;
