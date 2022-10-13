@@ -35,6 +35,7 @@ CHANGELOG:
    - Added 16 inline styles from the HighlightJS site
    - Removed single linked default stylesheet and related file
    - Contains Ability to select desired codeblock styles (16 currently)
+   - Wraps all <code> tags in <pre> tags via JS
    - Contains ability to enable or disable the plugin
    - Contains localization support
    - Contains Select All Copy links on each codeblock
