@@ -68,14 +68,17 @@ function high_code_sacc_activate() {
         'isdefault'     => '0'
     );
 
-    // gid
-    $gid = $db->insert_query('settinggroups', $settinggroups);
-    
-    // disporder
+    // Group
+    $group['gid'] = $db->insert_query('settinggroups', $settinggroups);
+
+    // Gid
+    $gid = $db->insert_id();
+
+    // Disporder
     $disporder = '0';
     
     // Setting 1
-    $setting = array(
+    $setting_1 = array(
         'sid'           => '0',
         'name'          => 'high_code_sacc_setting_1',
         'title'         => $db->escape_string($lang->high_code_sacc_setting_1_title),
@@ -83,14 +86,14 @@ function high_code_sacc_activate() {
         'optionscode'   => 'yesno',
         'value'         => '1',
         'disporder'     => $disporder++,
-        'gid'           => $gid
+        'gid'           => intval($gid)
     );
 
     // Query Insert
-    $db->insert_query('settings', $setting);
+    $db->insert_query('settings', $setting_1);
 
     // Setting 2
-    $setting = array(
+    $setting_2 = array(
         'sid'           => '0',
         'name'          => 'high_code_sacc_setting_2',
         'title'         => $db->escape_string($lang->high_code_sacc_setting_2_title),
@@ -98,11 +101,11 @@ function high_code_sacc_activate() {
         'optionscode'   => "select\n0=Default\n1=Solarized Dark\n2=Solarized Light\n3=Github\n4=Railscasts\n5=Monakai Sublime\n6=Mono Blue\n7=Tomorrow\n8=Color Brewer\n9=Zenburn\n10=Agate\n11=Android Studio\n12=Dracula\n13=Rainbow\n14=VS\n15=Atom One Dark\n16=Atom One Light",
         'value'         => '0',
         'disporder'     => $disporder++,
-        'gid'           => $gid
+        'gid'           => intval($gid)
     );
 
     // Query Insert
-    $db->insert_query('settings', $setting);
+    $db->insert_query('settings', $setting_2);
     
     // Rebuild Settings
     rebuild_settings(); 
