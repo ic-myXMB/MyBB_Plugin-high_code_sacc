@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0.1
+ * Plugin Version: 1.0.2
  * 
  */
 
@@ -574,9 +574,9 @@ function selectCode(a)
 }
 </script>
 <!-- Highlight JS --> 
-<script src=\"inc/plugins/highlight/jscripts/highlight.min.js\"></script>
+<script src=\"inc/plugins/high_code_sacc/jscripts/highlight.min.js\"></script>
 <!-- Highlight JS And Plugins Init -->  
-<script src=\"inc/plugins/highlight/jscripts/high_code_sacc_init.js\"></script>
+<script src=\"inc/plugins/high_code_sacc/jscripts/high_code_sacc_init.js\"></script>
 <!-- Highlight JS Custom LineNumbers Plugin Style --> 
 <style>
 /** Linenumbers Plug **/

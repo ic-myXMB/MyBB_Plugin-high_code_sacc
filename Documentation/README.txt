@@ -5,7 +5,7 @@
  *
  * MyBB Version: 1.8.x (was created at time using 1.8.31)
  *
- * Current Plugin Version: 1.0.1
+ * Current Plugin Version: 1.0.2
  *
  * Langs: English, EnglishGB, Spanish, French, Italiano, German
  *
@@ -28,6 +28,11 @@ TO DO:
 
 
 CHANGELOG:
+
+- Version 1.0.2
+
+   - minor code edits (gid and group[gid] related)
+   - plugin included files directory name change 
 
 - Version 1.0.1
 
