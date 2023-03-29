@@ -25,6 +25,9 @@ $l['high_code_sacc_guid'] = '';
 $l['high_code_sacc_compatability'] = '18*';
 $l['high_code_sacc_code_name'] = 'highcodesacc';
 
+// Config Link
+$l['high_code_sacc_config'] = 'Impostazioni';
+
 // Settings Group
 $l['high_code_sacc_settingsgroup_title'] = 'Evidenzia codice Seleziona tutte le impostazioni di copia codice';
 $l['high_code_sacc_settingsgroup_description'] = 'Impostazioni per il plug-in Highlight Code Select All Copy Code.';

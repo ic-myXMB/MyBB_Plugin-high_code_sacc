@@ -22,22 +22,53 @@ if(!defined("IN_MYBB")) {
 
 // Load in Showthread
 $plugins->add_hook("showthread_start", "high_code_sacc");
+
 // Load in Portal 
 $plugins->add_hook("portal_start", "high_code_sacc");
 
 // Plugin Information
 function high_code_sacc_info() {
-
+    
     // Globals
-    global $lang;
+    global $db, $lang, $custom_settingsgroup_cache;
+    
+    // Lang Load
+	$lang->load("high_code_sacc");
 
-    // Language Load
-    $lang->load("high_code_sacc");
+	// Configuration link
+	if(empty($high_code_sacc_settingsgroup_cache))
+	{
+		// Query
+		$query = $db->simple_select('settinggroups', 'gid, name', 'isdefault = 0');
+        
+        // While
+		while($group = $db->fetch_array($query))
+		{
+			// Cache 
+			$high_code_sacc_settingsgroup_cache[$group['name']] = $group['gid'];
+		}
+	}
+
+    // Gid
+	$gid = isset($high_code_sacc_settingsgroup_cache['high_code_sacc']) ? $high_code_sacc_settingsgroup_cache['high_code_sacc'] : 0;
+    
+    // Config Link
+	$high_code_sacc_config = '<br />';
+    
+    // If Gid
+	if($gid)
+	{
+	    // Globals
+		global $mybb;
+		
+        // Config Link
+		$high_code_sacc_config = '<a style="float: right;" href="index.php?module=config&amp;action=change&amp;gid='.$gid.'">'.$lang->high_code_sacc_config.'</a>';
+	}
     
     // Array Return  
     return array(
         'name' => $lang->high_code_sacc_name,
-        'description' => $lang->high_code_sacc_description,
+        'description' => $lang->high_code_sacc_description .$high_code_sacc_config,
         'website' => $lang->high_code_sacc_website,
         'author' => $lang->high_code_sacc_author,
         'authorsite' => $lang->high_code_sacc_author_site,
@@ -117,6 +148,7 @@ function high_code_sacc_activate() {
 
     // Showthread Template
     find_replace_templatesets('showthread', '#'.preg_quote('</head>').'#i', '{$high_code_sacc}</head>');
+
     // Portal Template
     find_replace_templatesets('portal', '#'.preg_quote('</head>').'#i', '{$high_code_sacc}</head>');
 
@@ -141,6 +173,7 @@ function high_code_sacc_deactivate() {
 
   // Showthread Template
   find_replace_templatesets('showthread', '#'.preg_quote('{$high_code_sacc}</head>').'#i', '</head>');
+
   // Portal Template
   find_replace_templatesets('portal', '#'.preg_quote('{$high_code_sacc}</head>').'#i', '</head>');
 

@@ -35,7 +35,8 @@ CHANGELOG:
 - Version 1.0.2
 
    - minor code edits (gid and group[gid] related)
-   - plugin included files directory name change   
+   - plugin included files directory name change
+   - added plugin page settings link    
 
 - Version 1.0.1
 

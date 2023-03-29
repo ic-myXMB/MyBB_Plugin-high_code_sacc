@@ -25,6 +25,9 @@ $l['high_code_sacc_guid'] = '';
 $l['high_code_sacc_compatability'] = '18*';
 $l['high_code_sacc_code_name'] = 'highcodesacc';
 
+// Config Link
+$l['high_code_sacc_config'] = 'Configuracion';
+
 // Settings Group
 $l['high_code_sacc_settingsgroup_title'] = 'Resaltar codigo Seleccionar todos los ajustes de copiar codigo';
 $l['high_code_sacc_settingsgroup_description'] = 'Configuracion para el complemento Resaltar codigo Seleccionar todo copiar código.';

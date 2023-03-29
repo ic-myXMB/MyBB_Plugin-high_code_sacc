@@ -33,7 +33,8 @@ CHANGELOG:
 
    - minor code edits (gid and group[gid] related)
    - plugin included files directory name change 
-
+   - added plugin page settings link
+   
 - Version 1.0.1
 
    - Further localization support (currently: English, EnglishGB, Spanish, French Italian,German)
