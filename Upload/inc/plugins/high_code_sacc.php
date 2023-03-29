@@ -30,7 +30,7 @@ $plugins->add_hook("portal_start", "high_code_sacc");
 function high_code_sacc_info() {
     
     // Globals
-    global $db, $lang, $custom_settingsgroup_cache;
+    global $db, $lang, $high_code_sacc_settingsgroup_cache;
     
     // Lang Load
 	$lang->load("high_code_sacc");
