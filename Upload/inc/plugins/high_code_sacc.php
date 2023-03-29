@@ -36,14 +36,12 @@ function high_code_sacc_info() {
 	$lang->load("high_code_sacc");
 
 	// Configuration link
-	if(empty($high_code_sacc_settingsgroup_cache))
-	{
+	if(empty($high_code_sacc_settingsgroup_cache)) {
 		// Query
 		$query = $db->simple_select('settinggroups', 'gid, name', 'isdefault = 0');
         
         // While
-		while($group = $db->fetch_array($query))
-		{
+		while($group = $db->fetch_array($query)) {
 			// Cache 
 			$high_code_sacc_settingsgroup_cache[$group['name']] = $group['gid'];
 		}
@@ -56,8 +54,7 @@ function high_code_sacc_info() {
 	$high_code_sacc_config = '<br />';
     
     // If Gid
-	if($gid)
-	{
+	if($gid) {
 	    // Globals
 		global $mybb;
 		
