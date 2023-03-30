@@ -36,7 +36,7 @@ function high_code_sacc_info() {
 	// Lang Load
 	$lang->load("high_code_sacc");
 
-	// Configuration link
+	// Settings Link
 	if(empty($high_code_sacc_settingsgroup_cache)) {
 
 		// Gid Query
@@ -58,7 +58,7 @@ function high_code_sacc_info() {
     
 	// If Gid
 	if($gid) {
-		
+
 	    // Globals
 		global $mybb;
 		
