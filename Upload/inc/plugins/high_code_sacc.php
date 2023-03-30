@@ -63,7 +63,7 @@ function high_code_sacc_info() {
 		global $mybb;
 		
 		// Settings Link
-		$high_code_sacc_config = '<a style="float: right;" href="index.php?module=config&amp;action=change&amp;gid='.$gid.'">'.$lang->high_code_sacc_config.'</a>';
+		$high_code_sacc_config = '<a style="float: right;" href="index.php?module=config&amp;action=change&amp;gid='.$gid.'"><img src="../inc/plugins/high_code_sacc/images/settings.png" width="16px" height="16px" style="padding: 2px; vertical-align: middle;">'.$lang->high_code_sacc_config.'</a>';
 	}
     
     // Array Return  
