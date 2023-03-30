@@ -197,7 +197,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Default CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/default.min.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/default.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #f3f3f3; }
+.codeblock { background: #f3f3f3; }
+.codeblock .title { color: #444444; }
+.codeblock .title a:link { color: #444444; }
+.hljs-ln .ln-num::before { color: #444444 !important; }
+</style>";
 
   }
 
@@ -274,7 +282,7 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Monakai Sublime CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/monakai-sublime.min.css\" rel=\"stylesheet\" />
+<link href=\"inc/plugins/high_code_sacc/themes/monokai-sublime.min.css\" rel=\"stylesheet\" />
 <style>
 /*  Extra */
 .hljs { background: #23241f; }
