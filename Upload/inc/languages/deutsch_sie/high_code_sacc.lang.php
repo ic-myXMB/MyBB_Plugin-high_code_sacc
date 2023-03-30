@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0.2
+ * Plugin Version: 1.0.3
  *
  * Lang: Deutsch SIE
  * 

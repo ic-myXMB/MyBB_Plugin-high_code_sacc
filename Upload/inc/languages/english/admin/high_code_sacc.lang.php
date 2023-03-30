@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0.2
+ * Plugin Version: 1.0.3
  *
  * Lang: English
  * 
@@ -20,12 +20,12 @@ $l['high_code_sacc_description'] = 'Select all and copy in Code and PHP codebloc
 $l['high_code_sacc_website'] = 'https://github.com/ic-myXMB/MyBB_Plugin-high_code_sacc';
 $l['high_code_sacc_author'] = 'ic_myXMB & Vintagedaddyo';
 $l['high_code_sacc_author_site'] = 'https://github.com/ic-myXMB/MyBB_Plugin-high_code_sacc';
-$l['high_code_sacc_version'] = '1.0.2';
+$l['high_code_sacc_version'] = '1.0.3';
 $l['high_code_sacc_guid'] = '';
 $l['high_code_sacc_compatability'] = '18*';
 $l['high_code_sacc_code_name'] = 'highcodesacc';
 
-// Config Link
+// Settings Link
 $l['high_code_sacc_config'] = 'Settings';
 
 // Settings Group

@@ -5,7 +5,7 @@
  *
  * MyBB Version: 1.8.x (was created at time using 1.8.31)
  *
- * Current Plugin Version: 1.0.2
+ * Current Plugin Version: 1.0.3
  *
  * Langs: English, EnglishGB, Spanish, French, Italiano, German
  *
@@ -28,6 +28,12 @@ TO DO:
 
 
 CHANGELOG:
+
+- Version 1.0.3
+
+   - decided to cut down on some of the existing lines within plugin as such was getting lengthly & cluttered with all the styles inline
+   - removed existing 16 themes inline styling in the plugin and added themes directory and 16 specific theme css files
+   - removed inline line-numbers css and added as css file 
 
 - Version 1.0.2
 
