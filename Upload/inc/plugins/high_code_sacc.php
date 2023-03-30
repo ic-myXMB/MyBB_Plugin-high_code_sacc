@@ -130,7 +130,7 @@ function high_code_sacc_activate() {
         'name'          => 'high_code_sacc_setting_2',
         'title'         => $db->escape_string($lang->high_code_sacc_setting_2_title),
         'description'   => $db->escape_string($lang->high_code_sacc_setting_2_description),
-        'optionscode'   => "select\n0=Default\n1=Solarized Dark\n2=Solarized Light\n3=Github\n4=Railscasts\n5=Monakai Sublime\n6=Mono Blue\n7=Tomorrow\n8=Color Brewer\n9=Zenburn\n10=Agate\n11=Android Studio\n12=Dracula\n13=Rainbow\n14=VS\n15=Atom One Dark\n16=Atom One Light",
+        'optionscode'   => "select\n0=Default\n1=Solarized Dark\n2=Solarized Light\n3=Github\n4=Railscasts\n5=Monakai Sublime\n6=Mono Blue\n7=Tomorrow\n8=Color Brewer\n9=Zenburn\n10=Agate\n11=Android Studio\n12=Dracula\n13=Rainbow\n14=VS\n15=Atom One Dark\n16=Atom One Light\n17=Github Dark Dimmed\n18=Github Dark\n19=Dark\n20=Stack Overflow Light\n21=Stack Overflow Dark\n22=Google Code\n23=Foundation\n24=XCode\n25=Night Owl\n26=Kimbie Light\n27=Kimbie Dark\n28=Codepen Embed\n29=Srcery\n30=Routeros\n31=Panda Syntax Light\n32=Panda Syntax Dark\n33=DeviBeans",
         'value'         => '0',
         'disporder'     => $disporder++,
         'gid'           => intval($gid)
@@ -197,7 +197,7 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Default CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/default.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/default.min.css\" rel=\"stylesheet\" />";
 
   }
 
@@ -206,7 +206,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Solarized Dark CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/solarized-dark.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/solarized-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background:#002b36; }
+.codeblock { background: #002b36; }
+.codeblock .title { color: #93a1a1; }
+.codeblock .title a:link { color: #93a1a1; }
+.hljs-ln .ln-num::before { color: #93a1a1 !important; }
+</style>";
 
   }
 
@@ -215,7 +223,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Solarized Light CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/solarized-light.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/solarized-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background:#fdf6e3; }
+.codeblock { background: #fdf6e3; }
+.codeblock .title { color: #586e75; }
+.codeblock .title a:link { color: #586e75; }
+.hljs-ln .ln-num::before { color: #586e75 !important; }
+</style>";
 
   }  
 
@@ -224,7 +240,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Github CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/github.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/github.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #ffffff; }
+.codeblock { background: #ffffff; }
+.codeblock .title { color: #333333; }
+.codeblock .title a:link { color: #333333; }
+.hljs-ln .ln-num::before { color: #333333 !important; }
+</style>";
 
   }  
 
@@ -233,7 +257,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Railscasts CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/railscasts.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/railscasts.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #2b2b2b; }
+.codeblock { background: #2b2b2b; }
+.codeblock .title { color: #e6e1dc; }
+.codeblock .title a:link { color: #e6e1dc; }
+.hljs-ln .ln-num::before { color: #e6e1dc !important; }
+</style>";
 
   }
 
@@ -242,7 +274,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Monakai Sublime CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/monakai-sublime.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/monakai-sublime.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #23241f; }
+.codeblock { background: #23241f; }
+.codeblock .title { color: #f8f8f2; }
+.codeblock .title a:link { color: #f8f8f2; }
+.hljs-ln .ln-num::before { color: #f8f8f2 !important; }
+</style>";
 
   }
 
@@ -251,7 +291,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Mono Blue CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/mono-blue.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/mono-blue.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #eaeef3; }
+.codeblock { background: #eaeef3; }
+.codeblock .title { color: #00193a; }
+.codeblock .title a:link { color: #00193a; }
+.hljs-ln .ln-num::before { color: #00193a !important; }
+</style>";
 
   } 
 
@@ -260,7 +308,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Tomorrow CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/tomorrow.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/tomorrow.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #ffffff; }
+.codeblock { background: #ffffff; }
+.codeblock .title { color: #4d4d4c; }
+.codeblock .title a:link { color: #4d4d4c; }
+.hljs-ln .ln-num::before { color: #4d4d4c!important; }
+</style>";
 
   } 
 
@@ -269,7 +325,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Color Brewer CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/color-brewer.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/color-brewer.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #ffffff; }
+.codeblock { background: #ffffff; }
+.codeblock .title { color: #000000; }
+.codeblock .title a:link { color: #000000; }
+.hljs-ln .ln-num::before { color: #000000 !important; }
+</style>";
 
   }   
 
@@ -278,7 +342,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Zenburn CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/zenburn.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/zenburn.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #383838; }
+.codeblock { background: #383838; }
+.codeblock .title { color: #dcdccc; }
+.codeblock .title a:link { color: #dcdccc; }
+.hljs-ln .ln-num::before { color: #dcdccc !important; }
+</style>";
 
   } 
 
@@ -287,7 +359,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Agate CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/agate.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/agate.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #333333; }
+.codeblock { background: #333333; }
+.codeblock .title { color: #ffffff; }
+.codeblock .title a:link { color: #ffffff; }
+.hljs-ln .ln-num::before { color: #ffffff !important; }
+</style>";
 
   } 
 
@@ -296,7 +376,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Android Studio CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/android-studio.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/android-studio.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #282b2e; }
+.codeblock { background: #282b2e; }
+.codeblock .title { color: #a9b7c6; }
+.codeblock .title a:link { color: #a9b7c6; }
+.hljs-ln .ln-num::before { color: #a9b7c6 !important; }
+</style>";
 
   }
 
@@ -305,7 +393,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Dracula CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/dracula.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/dracula.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #282936; }
+.codeblock { background: #282936; }
+.codeblock .title { color: #e9e9f4; }
+.codeblock .title a:link { color: #e9e9f4; }
+.hljs-ln .ln-num::before { color: #e9e9f4 !important; }
+</style>";
 
   } 
 
@@ -314,7 +410,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Rainbow CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/rainbow.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/rainbow.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #474949; }
+.codeblock { background: #474949; }
+.codeblock .title { color: #d1d9e1; }
+.codeblock .title a:link { color: #d1d9e1; }
+.hljs-ln .ln-num::before { color: #d1d9e1 !important; }
+</style>";
 
   } 
 
@@ -323,7 +427,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- VS CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/vs.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/vs.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #ffffff; }
+.codeblock { background: #ffffff; }
+.codeblock .title { color: #000000; }
+.codeblock .title a:link { color: #000000; }
+.hljs-ln .ln-num::before { color: #000000 !important; }
+</style>";
 
   } 
 
@@ -332,7 +444,15 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Atom One Dark CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/atom-one-dark.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/atom-one-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #282c34; }
+.codeblock { background: #282c34; }
+.codeblock .title { color: #abb2bf; }
+.codeblock .title a:link { color: #abb2bf; }
+.hljs-ln .ln-num::before { color: #abb2bf !important; }
+</style>";
 
   }  
 
@@ -341,9 +461,311 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Atom One Light CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/atom-one-light.css\" rel=\"stylesheet\" />";
+<link href=\"inc/plugins/high_code_sacc/themes/atom-one-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fafafa; }
+.codeblock { background: #fafafa; }
+.codeblock .title { color: #383a42; }
+.codeblock .title a:link { color: #383a42; }
+.hljs-ln .ln-num::before { color: #383a42 !important; }
+</style>";
 
   }
+
+  // Style 17: Github Dark Dimmed
+  if ($mybb->settings['high_code_sacc_setting_2'] == "17") {
+
+     // Style
+     $codeblock_style = "<!-- Github Dark Dimmed -->
+<link href=\"inc/plugins/high_code_sacc/themes/github-dark-dimmed.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #22272e; }
+.codeblock { background: #22272e; }
+.codeblock .title { color: #adbac7; }
+.codeblock .title a:link { color: #adbac7; }
+.hljs-ln .ln-num::before { color: #adbac7 !important; }
+</style>";
+
+  }  
+
+  // Style 18: Github Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "18") {
+
+     // Style
+     $codeblock_style = "<!-- Github Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/github-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #0d1117; }
+.codeblock { background: #0d1117; }
+.codeblock .title { color: #c9d1d9; }
+.codeblock .title a:link { color: #c9d1d9; }
+.hljs-ln .ln-num::before { color: #c9d1d9 !important; }
+</style>";
+
+  }
+
+  // Style 19: Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "19") {
+
+     // Style
+     $codeblock_style = "<!-- Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #303030; }
+.codeblock { background: #303030; }
+.codeblock .title { color: #DDDDDD; }
+.codeblock .title a:link { color: #DDDDDD; }
+.hljs-ln .ln-num::before { color: #DDDDDD !important; }
+</style>";
+
+  }
+
+  // Style 20: Stack Overflow Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "20") {
+
+     // Style
+     $codeblock_style = "<!-- Stack Overflow Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/stackoverflow-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #f6f6f6; }
+.codeblock { background: #f6f6f6; }
+.codeblock .title { color: #2f3337; }
+.codeblock .title a:link { color: #2f3337; }
+.hljs-ln .ln-num::before { color: #2f3337 !important; }
+</style>";
+
+  }
+
+  // Style 21: Stack Overflow Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "21") {
+
+     // Style
+     $codeblock_style = "<!-- Stack Overflow Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/stackoverflow-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #1c1b1b; }
+.codeblock { background: #1c1b1b; }
+.codeblock .title { color: #FFFFFF; }
+.codeblock .title a:link { color: #FFFFFF; }
+.hljs-ln .ln-num::before { color: #FFFFFF !important; }
+</style>";
+
+  }
+
+  // Style 22: Google Code
+  if ($mybb->settings['high_code_sacc_setting_2'] == "22") {
+
+     // Style
+     $codeblock_style = "<!-- Google Code CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/googlecode.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #FFFFFF; }
+.codeblock { background: #FFFFFF; }
+.codeblock .title { color: #000000; }
+.codeblock .title a:link { color: #000000; }
+.hljs-ln .ln-num::before { color: #000000 !important; }
+</style>";
+
+  }
+
+  // Style 23: Foundation
+  if ($mybb->settings['high_code_sacc_setting_2'] == "23") {
+
+     // Style
+     $codeblock_style = "<!-- Foundation CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/foundation.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #eeeeee; }
+.codeblock { background: #eeeeee; }
+.codeblock .title { color: #000000; }
+.codeblock .title a:link { color: #000000; }
+.hljs-ln .ln-num::before { color: #000000 !important; }
+</style>";
+
+  }
+
+  // Style 24: XCode
+  if ($mybb->settings['high_code_sacc_setting_2'] == "24") {
+
+     // Style
+     $codeblock_style = "<!-- XCode CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/xcode.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #FFFFFF; }
+.codeblock { background: #FFFFFF; }
+.codeblock .title { color: #000000; }
+.codeblock .title a:link { color: #000000; }
+.hljs-ln .ln-num::before { color: #000000 !important; }
+</style>";
+
+  }
+
+  // Style 25: Night Owl
+  if ($mybb->settings['high_code_sacc_setting_2'] == "25") {
+
+     // Style
+     $codeblock_style = "<!-- Night Owl CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/night-owl.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #011627; }
+.codeblock { background: #011627; }
+.codeblock .title { color: #d6deeb; }
+.codeblock .title a:link { color: #d6deeb; }
+.hljs-ln .ln-num::before { color: #d6deeb !important; }
+</style>";
+
+  }
+
+
+  // Style 26: Kimbie Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "26") {
+
+     // Style
+     $codeblock_style = "<!-- Kimbie Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/kimbie-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fbebd4; }
+.codeblock { background: #fbebd4; }
+.codeblock .title { color: #84613d; }
+.codeblock .title a:link { color: #84613d; }
+.hljs-ln .ln-num::before { color: #84613d !important; }
+</style>";
+
+  }
+
+  // Style 27: Kimbie Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "27") {
+
+     // Style
+     $codeblock_style = "<!-- Kimbie Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/kimbie-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #221a0f; }
+.codeblock { background: #221a0f; }
+.codeblock .title { color: #d3af86; }
+.codeblock .title a:link { color: #d3af86; }
+.hljs-ln .ln-num::before { color: #d3af86 !important; }
+</style>";
+
+  }
+
+
+
+  // Style 28: Codepen Embed
+  if ($mybb->settings['high_code_sacc_setting_2'] == "28") {
+
+     // Style
+     $codeblock_style = "<!-- Codepen Embed CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/codepen-embed.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #222222; }
+.codeblock { background: #222222; }
+.codeblock .title { color: #FFFFFFF; }
+.codeblock .title a:link { color: #FFFFFF; }
+.hljs-ln .ln-num::before { color: #FFFFFF !important; }
+</style>";
+
+  }
+
+  // Style 29: Srcery
+  if ($mybb->settings['high_code_sacc_setting_2'] == "29") {
+
+     // Style
+     $codeblock_style = "<!-- Srcery CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/srcery.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #1c1b19; }
+.codeblock { background: #1c1b19; }
+.codeblock .title { color: #fce8c3; }
+.codeblock .title a:link { color: #fce8c3; }
+.hljs-ln .ln-num::before { color: #fce8c3 !important; }
+</style>";
+
+  }
+
+  // Style 30: Routeros
+  if ($mybb->settings['high_code_sacc_setting_2'] == "30") {
+
+     // Style
+     $codeblock_style = "<!-- Routeros CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/routeros.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #f0f0f0; }
+.codeblock { background: #f0f0f0; }
+.codeblock .title { color: #444444; }
+.codeblock .title a:link { color: #444444; }
+.hljs-ln .ln-num::before { color: #444444 !important; }
+.table {color: #A0A0A0;}
+</style>";
+
+  }
+
+  // Style 31: Panda Syntax Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "31") {
+
+     // Style
+     $codeblock_style = "<!-- Panda Syntax Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/panda-syntax-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #e6e6e6; }
+.codeblock { background: #e6e6e6; }
+.codeblock .title { color: #2a2c2d; }
+.codeblock .title a:link { color: #2a2c2d; }
+.hljs-ln .ln-num::before { color: #2a2c2d !important; }
+</style>";
+
+  }
+
+  // Style 32: Panda Syntax Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "32") {
+
+     // Style
+     $codeblock_style = "<!-- Panda Syntax Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/panda-syntax-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #2a2c2d; }
+.codeblock { background: #2a2c2d; }
+.codeblock .title { color: #e6e6e6; }
+.codeblock .title a:link { color: #e6e6e6; }
+.hljs-ln .ln-num::before { color: #e6e6e6 !important; }
+</style>";
+
+  }
+
+  // Style 33: DeviBeans
+  if ($mybb->settings['high_code_sacc_setting_2'] == "33") {
+
+     // Style
+     $codeblock_style = "<!-- DeviBeans CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/devibeans.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #000000; }
+.codeblock { background: #000000; }
+.codeblock .title { color: #a39e9b; }
+.codeblock .title a:link { color: #a39e9b; }
+.hljs-ln .ln-num::before { color: #a39e9b !important; }
+</style>";
+
+  }
+
 
   // Add To / Remove From Head On Showthread And Portal templates
 
@@ -377,9 +799,6 @@ function high_code_sacc() {
 
      // Code Code (Select All) Is Lang Code
      $lang->code .= ''.$lang->high_code_sacc_code.'';
-
-     // Add Codeblock Style Inline
-     //$high_code_sacc = "<style>".$codeblock_style."</style>";
 
      // Add Codeblock Style Stylesheet Linkage
      $high_code_sacc = "".$codeblock_style."";

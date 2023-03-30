@@ -22,15 +22,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
        hljs.highlightElement(el);
     });
 });
+
 // brPlugin
 const brPlugin = {
 	// before
-    "before:highlightBlock": ({ block }) => {
+    "before:highlightElement": ({ el }) => {
       // inner html
-      block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+      el.innerHTML = el.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
     },
     // after
-    "after:highlightBlock": ({ result }) => {
+    "after:highlightElement": ({ result }) => {
       // result value
       result.value = result.value.replace(/\n/g, '<br>');
     }

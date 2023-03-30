@@ -11,7 +11,7 @@
  *
  * Langs: English, EnglishGB, Spanish, French, Italiano, German
  *
- * Current HighlightJS version:  v11.6.0
+ * Current HighlightJS version:  v11.7.0
  *
  */
 
@@ -33,6 +33,7 @@ CHANGELOG:
 
 - Version 1.0.3
 
+   - Added codeblock styles (had 16 previously) and now added 17 additonal codeblock styles (total: 33 currently) 
    - decided to cut down on some of the existing lines within plugin as such was getting lengthly & cluttered with all the styles inline
    - removed existing 16 themes inline styling in the plugin and added themes directory and 16 specific theme css files
    - removed inline line-numbers css and added as css file 
