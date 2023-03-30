@@ -376,7 +376,7 @@ function high_code_sacc() {
 
      // Style
      $codeblock_style = "<!-- Android Studio CSS -->
-<link href=\"inc/plugins/high_code_sacc/themes/android-studio.min.css\" rel=\"stylesheet\" />
+<link href=\"inc/plugins/high_code_sacc/themes/androidstudio.min.css\" rel=\"stylesheet\" />
 <style>
 /*  Extra */
 .hljs { background: #282b2e; }
