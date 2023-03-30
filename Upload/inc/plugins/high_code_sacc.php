@@ -14,6 +14,7 @@
 
 // If Not Defined
 if(!defined("IN_MYBB")) {
+
   // Then Die
   die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
 }
@@ -32,33 +33,36 @@ function high_code_sacc_info() {
     // Globals
     global $db, $lang, $high_code_sacc_settingsgroup_cache;
     
-    // Lang Load
+	// Lang Load
 	$lang->load("high_code_sacc");
 
 	// Configuration link
 	if(empty($high_code_sacc_settingsgroup_cache)) {
-		// Query
+
+		// Gid Query
 		$gid_query = $db->simple_select('settinggroups', 'gid, name', 'isdefault = 0');
         
-        // While
+		// While
 		while($group = $db->fetch_array($gid_query)) {
+
 			// Cache 
 			$high_code_sacc_settingsgroup_cache[$group['name']] = $group['gid'];
 		}
 	}
 
-    // Gid
+	// Gid
 	$gid = isset($high_code_sacc_settingsgroup_cache['high_code_sacc']) ? $high_code_sacc_settingsgroup_cache['high_code_sacc'] : 0;
     
-    // Config Link
+	// Settings Link
 	$high_code_sacc_config = '<br />';
     
-    // If Gid
+	// If Gid
 	if($gid) {
+		
 	    // Globals
 		global $mybb;
 		
-        // Config Link
+		// Settings Link
 		$high_code_sacc_config = '<a style="float: right;" href="index.php?module=config&amp;action=change&amp;gid='.$gid.'">'.$lang->high_code_sacc_config.'</a>';
 	}
     
@@ -374,17 +378,18 @@ function high_code_sacc() {
      // Code Code (Select All) Is Lang Code
      $lang->code .= ''.$lang->high_code_sacc_code.'';
 
-  	 // Add Codeblock Style Inline
+     // Add Codeblock Style Inline
      //$high_code_sacc = "<style>".$codeblock_style."</style>";
 
-  	 // Add Codeblock Style Stylesheet Linkage
+     // Add Codeblock Style Stylesheet Linkage
      $high_code_sacc = "".$codeblock_style."";
 
   }
 
   // If Plugin Not Active 
   if ($mybb->settings['high_code_sacc_setting_1'] == "0") { 
-  	 // Empty Codeblock Style
+
+     // Empty Codeblock Style
      $high_code_sacc = "";
   }
 
