@@ -59,7 +59,7 @@ function high_code_sacc_info() {
 	// If Gid
 	if($gid) {
 
-	    // Globals
+		// Globals
 		global $mybb;
 		
 		// Settings Link
