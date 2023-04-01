@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.0.3
+ * Plugin Version: 1.0.4
  * 
  */
 
@@ -130,7 +130,7 @@ function high_code_sacc_activate() {
         'name'          => 'high_code_sacc_setting_2',
         'title'         => $db->escape_string($lang->high_code_sacc_setting_2_title),
         'description'   => $db->escape_string($lang->high_code_sacc_setting_2_description),
-        'optionscode'   => "select\n0=Default\n1=Solarized Dark\n2=Solarized Light\n3=Github\n4=Railscasts\n5=Monakai Sublime\n6=Mono Blue\n7=Tomorrow\n8=Color Brewer\n9=Zenburn\n10=Agate\n11=Android Studio\n12=Dracula\n13=Rainbow\n14=VS\n15=Atom One Dark\n16=Atom One Light\n17=Github Dark Dimmed\n18=Github Dark\n19=Dark\n20=Stack Overflow Light\n21=Stack Overflow Dark\n22=Google Code\n23=Foundation\n24=XCode\n25=Night Owl\n26=Kimbie Light\n27=Kimbie Dark\n28=Codepen Embed\n29=Srcery\n30=Routeros\n31=Panda Syntax Light\n32=Panda Syntax Dark\n33=DeviBeans",
+        'optionscode'   => "select\n0=Default\n1=Solarized Dark\n2=Solarized Light\n3=Github\n4=Railscasts\n5=Monakai Sublime\n6=Mono Blue\n7=Tomorrow\n8=Color Brewer\n9=Zenburn\n10=Agate\n11=Android Studio\n12=Dracula\n13=Rainbow\n14=VS\n15=Atom One Dark\n16=Atom One Light\n17=Github Dark Dimmed\n18=Github Dark\n19=Dark\n20=Stack Overflow Light\n21=Stack Overflow Dark\n22=Google Code\n23=Foundation\n24=XCode\n25=Night Owl\n26=Kimbie Light\n27=Kimbie Dark\n28=Codepen Embed\n29=Srcery\n30=Routeros\n31=Panda Syntax Light\n32=Panda Syntax Dark\n33=DeviBeans\n34=Lightfair\n35=Obsidian\n36=Nord\n37=QT Creator Light\n38=QT Creator Dark\n39=Paraiso Light\n40=Paraiso Dark\n41=isbl Editor Light\n42=isbl Editor Dark\n43=nnfx Light\n44=nnfx Dark\n45=Grayscale",
         'value'         => '0',
         'disporder'     => $disporder++,
         'gid'           => intval($gid)
@@ -634,7 +634,6 @@ function high_code_sacc() {
 
   }
 
-
   // Style 26: Kimbie Light
   if ($mybb->settings['high_code_sacc_setting_2'] == "26") {
 
@@ -668,8 +667,6 @@ function high_code_sacc() {
 </style>";
 
   }
-
-
 
   // Style 28: Codepen Embed
   if ($mybb->settings['high_code_sacc_setting_2'] == "28") {
@@ -773,7 +770,210 @@ function high_code_sacc() {
 </style>";
 
   }
+  
+  // Style 34: Lightfair
+  if ($mybb->settings['high_code_sacc_setting_2'] == "34") {
 
+     // Style
+     $codeblock_style = "<!-- Lightfair CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/lightfair.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fff; }
+.codeblock { background: #fff; }
+.codeblock .title { color: ##444; }
+.codeblock .title a:link { color: ##444; }
+.hljs-ln .ln-num::before { color: ##444 !important; }
+</style>";
+
+  }
+
+  // Style 35: Obsidian
+  if ($mybb->settings['high_code_sacc_setting_2'] == "35") {
+
+     // Style
+     $codeblock_style = "<!-- Obsidian CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/obsidian.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #282b2e; }
+.codeblock { background: #282b2e; }
+.codeblock .title { color: #e0e2e4; }
+.codeblock .title a:link { color: #e0e2e4; }
+.hljs-ln .ln-num::before { color: #e0e2e4 !important; }
+</style>";
+
+  }
+
+  // Style 36: Nord
+  if ($mybb->settings['high_code_sacc_setting_2'] == "36") {
+
+     // Style
+     $codeblock_style = "<!-- Nord CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/nord.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #2e3440; }
+.codeblock { background: #2e3440; }
+.codeblock .title { color: #d8dee9; }
+.codeblock .title a:link { color: #d8dee9; }
+.hljs-ln .ln-num::before { color: #d8dee9 !important; }
+</style>";
+
+  }
+
+  // Style 37: QT Creator Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "37") {
+
+     // Style
+     $codeblock_style = "<!-- QT Creator Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/qtcreator-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fff; }
+.codeblock { background: #fff; }
+.codeblock .title { color: #000; }
+.codeblock .title a:link { color: #000; }
+.hljs-ln .ln-num::before { color: #000 !important; }
+</style>";
+
+  }
+
+  // Style 38: QT Creator Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "38") {
+
+     // Style
+     $codeblock_style = "<!-- QT Creator Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/qtcreator-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #000000; }
+.codeblock { background: #000000; }
+.codeblock .title { color: #aaa; }
+.codeblock .title a:link { color: #aaa; }
+.hljs-ln .ln-num::before { color: #aaa !important; }
+</style>";
+
+  }
+
+  // Style 39: Paraiso Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "39") {
+
+     // Style
+     $codeblock_style = "<!-- Paraiso Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/paraiso-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #e7e9db; }
+.codeblock { background: #e7e9db; }
+.codeblock .title { color: #4f424c; }
+.codeblock .title a:link { color: #4f424c; }
+.hljs-ln .ln-num::before { color: #4f424c !important; }
+</style>";
+
+  }
+
+  // Style 40: Paraiso Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "40") {
+
+     // Style
+     $codeblock_style = "<!-- Paraiso Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/paraiso-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #2f1e2e; }
+.codeblock { background: #2f1e2e; }
+.codeblock .title { color: #a39e9b; }
+.codeblock .title a:link { color: #a39e9b; }
+.hljs-ln .ln-num::before { color: #a39e9b !important; }
+</style>";
+
+  }
+
+  // Style 41: isbl Editor Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "41") {
+
+     // Style
+     $codeblock_style = "<!-- isbl Editor Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/isbl-editor-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fff; }
+.codeblock { background: #fff; }
+.codeblock .title { color: #000; }
+.codeblock .title a:link { color: #000; }
+.hljs-ln .ln-num::before { color: #000 !important; }
+</style>";
+
+  }
+
+  // Style 42: isbl Editor Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "42") {
+
+     // Style
+     $codeblock_style = "<!-- isbl Editor Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/isbl-editor-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #404040; }
+.codeblock { background: #404040; }
+.codeblock .title { color: #a39e9b; }
+.codeblock .title a:link { color: #a39e9b; }
+.hljs-ln .ln-num::before { color: #a39e9b !important; }
+</style>";
+
+  }
+
+  // Style 43: nnfx Light
+  if ($mybb->settings['high_code_sacc_setting_2'] == "43") {
+
+     // Style
+     $codeblock_style = "<!-- nnfx Light CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/nnfx-light.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fff; }
+.codeblock { background: #fff; }
+.codeblock .title { color: #000; }
+.codeblock .title a:link { color: #000; }
+.hljs-ln .ln-num::before { color: #000 !important; }
+</style>";
+
+  }
+
+  // Style 44: nnfx Dark
+  if ($mybb->settings['high_code_sacc_setting_2'] == "44") {
+
+     // Style
+     $codeblock_style = "<!-- nnfx Dark CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/nnfx-dark.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #333; }
+.codeblock { background: #333; }
+.codeblock .title { color: #fff; }
+.codeblock .title a:link { color: #fff; }
+.hljs-ln .ln-num::before { color: #fff !important; }
+</style>";
+
+  }
+  
+  // Style 45: Grayscale
+  if ($mybb->settings['high_code_sacc_setting_2'] == "45") {
+
+     // Style
+     $codeblock_style = "<!-- Grayscale CSS -->
+<link href=\"inc/plugins/high_code_sacc/themes/grayscale.min.css\" rel=\"stylesheet\" />
+<style>
+/*  Extra */
+.hljs { background: #fff; }
+.codeblock { background: #fff; }
+.codeblock .title { color: #333; }
+.codeblock .title a:link { color: #333; }
+.hljs-ln .ln-num::before { color: #333 !important; }
+</style>";
+
+  }
 
   // Add To / Remove From Head On Showthread And Portal templates
 

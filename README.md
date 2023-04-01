@@ -7,7 +7,7 @@
  *
  * MyBB Version: 1.8.x (was created at time using 1.8.31)
  *
- * Current Plugin Version: 1.0.3
+ * Current Plugin Version: 1.0.4
  *
  * Langs: English, EnglishGB, Spanish, French, Italiano, German
  *
@@ -31,6 +31,12 @@ TO DO:
 
 CHANGELOG:
 
+- Version 1.0.4
+
+   - Added codeblock styles (had 33 previously) and now added 12 additonal codeblock styles (total: 45 currently)
+
+  - Current Themes: Default, Solarized Dark, Solarized Light, Github, Railscasts, Monakai Sublime, Mono Blue, Tomorrow, Color Brewer, Zenburn, Agate, Android Studio, Dracula, Rainbow, VS, Atom One Dark, Atom One Light, Github Dark Dimmed, Github Dark, Dark, Stack Overflow Light, Stack Overflow Dark, Google Code, Foundation, XCode, Night Owl, Kimbie Light, Kimbie Dark, Codepen Embed, Srcery, Routeros, Panda Syntax Light, Panda Syntax Dark, DeviBeans, Lightfair, Obsidian, Nord, QT Creator Light, QT Creator Dark, Paraiso Light, Paraiso Dark, isbl Editor Light, isbl Editor Dark, nnfx Light, nnfx Dark, Grayscale 
+   
 - Version 1.0.3
 
    - Added codeblock styles (had 16 previously) and now added 17 additonal codeblock styles (total: 33 currently) 
